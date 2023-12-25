@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #7ed6df;
+  background-image: linear-gradient(315deg, #7ed6df 0%, #000000 74%); 
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+  max-width: 600px;
+  background-image: linear-gradient(to right top, #051937, #002c3f, #163d3f, #394b43, #565951);
+  padding: 4em 5em;
+  border-radius: 10px;
+  height: 50%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.accordion-item {
+  text-align: center;
+  width: 90%;
+}
+
+.accordion-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1;
+  min-height: 3.5rem;
+  cursor: pointer;
+}
+
+.accordion-item-title {
+  color: aliceblue;
+  font-size: 1.125rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-item-body-content {
+  width: 80%;
+  padding-top: 1em;
+  color: aliceblue;
+  text-align: left;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: 2px solid aliceblue;
+  width: 34px;
+  height: 34px;
+  transition: color 0.25s;
+  position: relative;
+  border-radius: 100%;
+}
+
+.icon::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  background-color: aliceblue;
+  pointer-events: all;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 14px;
+  background-color: aliceblue;
+  transition: all 0.3s ease-in-out;
+}
+
+/* JavaScript */
+
+.accordion-item-header.active > .icon::before {
+  transform: rotate(180deg);
+}
+
+.accordion-item-header.active > .icon::after {
+  transform: rotate(90deg);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 10px 0;
+  background-color: #dae1f5;
+}

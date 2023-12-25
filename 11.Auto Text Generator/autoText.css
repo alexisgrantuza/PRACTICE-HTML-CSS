@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #7ed6df;
+  background-image: linear-gradient(315deg, #7ed6df 0%, #000000 74%);
+  color: aliceblue;
+  font-family: sans-serif;
+}
+p {
+  font-size: 3rem;
+}
+
+.js {
+  color: yellow;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.typed-text {
+  color: #000000;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cursor {
+  background-color: #000000
+}

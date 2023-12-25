@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+  <title>Dynamic Form</title>
+</head>
+<body>
+
+  <header>
+    <div class="content-container">
+      <h1>Welcome to Real World</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro modi, itaque alias aliquam voluptas at non maiores dicta error quos nulla commodi est, nesciunt ducimus, quas cupiditate assumenda doloribus sint qui inventore! Praesentium repellendus soluta cumque unde consectetur ad quae adipisci, porro voluptas doloribus delectus possimus vero alias id? Eos!</p>
+      <button class="cta-btn" id="open">Sign Up</button>
+    </div>
+  </header>
+
+  <section class="modal-container" id="modal">
+    <section class="modal">
+      <button class="close-btn" id="close">x</button>
+      <div class="modal-content">
+        <h1>Sign Up</h1>
+        <form class="modal-form">
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter email" class="form-input">
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="text" id="password" placeholder="Enter Password" class="form-input">
+          </div>
+          <div>
+            <label for="password2">Confirm Password</label>
+            <input type="text" id="name" placeholder="Confirm Password" class="form-input">
+          </div>
+          <input type="submit" value="Submit" class="submit-btn"/>
+        </form>
+      </div>
+    </section>
+  </section>
+
+  <script src="form.js"></script>
+</body>
+</html>

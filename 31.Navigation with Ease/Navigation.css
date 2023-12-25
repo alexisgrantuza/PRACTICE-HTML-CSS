@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  color: #222;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container .logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nav {
+  position: fixed;
+  background: linear-gradient(315deg, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F, #F9F871);
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav a {
+  color: black;
+  text-decoration: none;
+  padding: 7px 15px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1;
+}
+
+/* ------- JavaScript -------*/
+.nav.active {
+  background-color: #7ed6df;
+  background-image: linear-gradient(315deg, #7ed6df 0%, #000000 50%);
+}
+
+.nav.active a {
+  color: aliceblue;
+}
+/* -------------- */
+
+.hero {
+  background-image: url(images/some-cool-wallpapers-v0-9gay3iib47da1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: -2;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 46px;
+  margin: -20px 0 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  max-width: 700px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #7ed6df;
+  background-image: linear-gradient(315deg, #7ed6df 0%, #000000 74%);
+}
+
+.content {
+  max-width: 600px;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+
+  /* Add a more blurry effect */
+  backdrop-filter: blur(30px);
+  transition: all 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+.content h1 {
+  margin-bottom: 20px;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.content p {
+  line-height: 24px;
+  color: aliceblue;
+}
